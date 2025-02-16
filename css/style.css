@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    /* position: fixed; */
+
     width: 100%;
     background-color: white;
     display: flex;
@@ -22,13 +22,10 @@ header {
     align-items: center;
     overflow: hidden;
     padding: 15px;
-    /* z-index: 3; */
+
     
 }
 
-/* .icon {
-    display: none;
-} */
 
 .nav-links {
     display: flex;
@@ -37,9 +34,6 @@ header {
     margin: auto;
     
 }
-/* .nav-links2 {
-    display: none;
-} */
 
 .nav-links a {
     display: flex;
@@ -56,35 +50,54 @@ header {
     display: flex;
     text-align: center;
     width: 100%;
-    height: 600px;
+    min-height: 650px;
     background-image: url("../background-fotos/bnw-bar-bcg.jpg") ;
     background-size: cover;
     
 }
 
-.hero-content::before {
+.hero-content::after {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 600px;
+    height: 100%;
 }
 .hero-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
     margin: auto;
     width: 80%;
     padding: 50px;
     font-weight: lighter ;
-    z-index: 2;
+    z-index: 3;
 }
 .hero-text p {
     padding: 15px;
 }
+/* Container área onde mosta os clientes */
 
+.container-clientes {
+    text-align: center;
+    margin: 100px auto;
+    width: 80%;
 
+}
+
+.title-clientes {
+    font-size: 1.2rem;
+    margin-bottom:50px ;
+}
+.clientes-imagens{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.clientes-imagens img{
+    margin-top: 15px;
+}
 
 /* telefone botao */
 .btn-moderno-tel {
@@ -114,7 +127,6 @@ header {
     text-transform: uppercase; 
     color: black;
     cursor: pointer;
-   /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Sombra sutil */
     transition: all 0.3s ease; /* Transições suaves */
 }
 
@@ -154,49 +166,52 @@ header {
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.8);
 }
 
-/* Container área onde mosta os clientes */
-
-.container-clientes {
-    display: flex;
-    font-size: 1.2rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    height: 85vh;
-}
-
-.clientes-imagens{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 5%;
-}
 
 
+/* Footer -----------------------------------------------------------------------*/ 
 footer {
     display: block;
+    font-weight: 300;
     width: 100%;
     height:300px;
     padding: 25px;
-    margin: auto;
-    background-color: rgb(51, 50, 50);
+    text-align: center;
+    background-color: rgb(40, 39, 39);
     color: white;
 }
 
-.social-media {
+.social-media, .site-map {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: auto;
+
 }
 
 .social-media a {
     width: 35px;
     height: 35px;
     margin: 20px;
+}
+
+.social-media a:hover {
+    transform: translateY(-4px); 
+    transition: all 0.3s ease; /* Transições suaves */
+}
+
+.site-map a{
+    text-decoration: none;
+    margin: 20px 25px;
+    padding: 20px;
+    color: white;
+}
+
+.site-map a:hover{
+    color: black;
+    background-color: white; 
+    transform: translateY(-4px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
 }
 
   
@@ -213,34 +228,34 @@ footer {
         height: 65px;
         
     }
-
-    /* .icon { 
-        display: block;
-        float: right;
-        width: 40px;
-        height: 40px;
-    } */
     .hero-content {
-        display: block;
+        min-height: auto;
         font-size: 1rem;
     }
-    .hero-content::before {
-        display: none;
-    }   
-
+    .hero-text {
+        font-size: 1rem;
+    }
+    .clientes-imagens{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .clientes-imagens img{
+        margin-top: 15px;
+    }
+    
+    .btn-moderno {
+        font-size: 1rem;
+    }
 
     /* Responsive Menu ---------------------------------------------*/
 
-    .header {
-        display: block;
-    }
 
     .nav-links.responsive {
-        position: relative;
         display: block;
         width: 70%;
-        /* margin-top: 70px; */
-        float: center;
+        margin: auto;
     }
 
     .nav-links.responsive a.icon {   
